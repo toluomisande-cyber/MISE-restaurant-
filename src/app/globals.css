@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-warm: #F6F3EC;
+    --text-primary: #24251F;
+    --text-muted: #6B6D5E;
+    --accent-fresh: #D7E7A5;
+    --accent-fresh-dark: #3E5A17;
+    --neutral-warm: #E8D5C0;
+    --accent-pepper: #A84C35;
+    --accent-pepper-light: #FDF3F0;
+    --surface-white: #FFFFFF;
+    --border-subtle: #E2DDD2;
+    --border-strong: #C8C1B2;
+  }
+
+  body {
+    background-color: var(--bg-warm);
+    color: var(--text-primary);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom editorial styling utilities */
+.bg-warm { background-color: #F6F3EC; }
+.bg-surface { background-color: #FFFFFF; }
+.bg-fresh { background-color: #D7E7A5; }
+.bg-fresh-light { background-color: #F3F8E5; }
+.bg-neutral-warm { background-color: #E8D5C0; }
+.bg-pepper { background-color: #A84C35; }
+.bg-pepper-light { background-color: #FDF3F0; }
+
+.text-primary-text { color: #24251F; }
+.text-muted-text { color: #6B6D5E; }
+.text-pepper { color: #A84C35; }
+.text-fresh-dark { color: #324911; }
+
+.border-subtle { border-color: #E2DDD2; }
+.border-warm { border-color: #E8D5C0; }
+.border-pepper { border-color: #A84C35; }
+
+/* Subtle shadow & paper aesthetic */
+.card-subtle {
+  background-color: #FFFFFF;
+  border: 1px solid #E2DDD2;
+  box-shadow: 0 1px 3px 0 rgba(36, 37, 31, 0.04), 0 1px 2px -1px rgba(36, 37, 31, 0.02);
+  transition: all 0.2s ease-in-out;
+}
+
+.card-subtle:hover {
+  border-color: #D4CDBC;
+  box-shadow: 0 4px 12px -2px rgba(36, 37, 31, 0.07), 0 2px 6px -2px rgba(36, 37, 31, 0.04);
+}
+
+.card-interactive {
+  background-color: #FFFFFF;
+  border: 1px solid #E2DDD2;
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card-interactive:hover {
+  transform: translateY(-2px);
+  border-color: #C8C1B2;
+  box-shadow: 0 8px 20px -4px rgba(36, 37, 31, 0.08);
+}
